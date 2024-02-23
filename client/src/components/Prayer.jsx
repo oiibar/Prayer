@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 function Prayer({ state }) {
   const [currentTime, setCurrentTime] = useState("");
 
   // Get current date
-  const currentDate = new Date();
+  const currentDate = useMemo(() => new Date(), []);
 
   // Define options for formatting the date
   const dayOptions = { weekday: "long" };
@@ -57,13 +57,6 @@ function Prayer({ state }) {
         </div>
         <div className="flex justify-between">
           <p>Isha</p> <p className="font-bold">{state.Isha}</p>
-        </div>
-      </div>
-
-      <div className="bg-green p-3 rounded-lg font-mont text-white text-center flex">
-        <div className="flex justify-between">
-          <p className="mr-24">Fajr</p>
-          <p className="font-bold">00:00:00</p>
         </div>
       </div>
     </>

@@ -50,7 +50,7 @@ app.get("/shymkent", async (req, res) => {
 
   try {
     const response = await axios.get(
-      `https://namaz.muftyat.kz/kk/api/times/${currentYear}/42.3/69.6`
+      `https://namaz.muftyat.kz/kk/api/times/${currentYear}/42.368009/69.612769`
     );
     res.json(response.data.result.find((el) => el.date === getCurrentDate()));
   } catch (err) {
@@ -64,7 +64,7 @@ app.get("/oskemen", async (req, res) => {
 
   try {
     const response = await axios.get(
-      `https://namaz.muftyat.kz/kk/api/times/${currentYear}/49.95/82.616667`
+      `https://namaz.muftyat.kz/kk/api/times/${currentYear}/49.948325/82.627848`
     );
     res.json(response.data.result.find((el) => el.date === getCurrentDate()));
   } catch (err) {

@@ -73,6 +73,4 @@ app.get("/oskemen", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
-});
+app.use(express.static("public"));

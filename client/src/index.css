@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-sm font-montserrat text-white;
+  }
+}
+
+@layer components {
+  .prayer {
+    @apply bg-black p-5 mb-5 rounded-lg text-white text-center flex flex-col;
+  }
+}
+
+@layer utilities {
+  .btn-red {
+    @apply bg-red-800 hover:bg-red-600;
+  }
+  .btn-green {
+    @apply bg-green-600 hover:bg-green-800;
+  }
+}

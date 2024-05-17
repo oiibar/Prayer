@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Prayer from "./components/Prayer";
-import getPrayerData from "./services/apiService";
+import getPrayerData from "./services/api.service";
 
-const cities = ["astana", "almaty", "shymkent", "oskemen"];
+const cities = ["astana", "almaty", "oskemen", "shymkent"];
 
 function App() {
   const [state, setState] = useState({});
@@ -31,15 +31,17 @@ function App() {
 
   return (
     <div
-      className={`relative h-screen flex items-center flex-col justify-center ${backgroundClass} bg-no-repeat bg-cover`}
+      className={`relative h-screen text-black flex items-center flex-col justify-center bg-no-repeat bg-cover ${backgroundClass}`}
     >
       <div className="mb-4">
-        <label htmlFor="city" className="mr-2 text-white">
+        <label htmlFor="city" className="mr-2">
           Select City:
         </label>
         <select
           id="city"
-          onChange={(e) => setSelectedCity(e.target.value)}
+          onChange={(e) => {
+            setSelectedCity(e.target.value);
+          }}
           value={selectedCity}
           className="p-2 border rounded"
         >

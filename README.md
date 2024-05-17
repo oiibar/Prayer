@@ -43,7 +43,7 @@ npm start
 <p>5. Navigate to the server folder</p>
 
 ```
-cd Prayer/server
+cd Prayer/backend
 ```
 
 <p>6. Install server-side packages</p>
@@ -55,7 +55,7 @@ npm i
 <p>7. Run the server</p>
 
 ```
-npm start
+npm run dev
 ```
 
   

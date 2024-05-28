@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://prayer-client.onrender.com"],
+    origin: ["https://prayer-cli.onrender.com"],
     credentials: true,
     optionsSuccessStatus: 200,
   })

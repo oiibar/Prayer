@@ -1,6 +1,6 @@
 const getPrayerData = async (selectedCity) => {
   try {
-    const response = await fetch(`http://localhost:5000/api/${selectedCity}`);
+    const response = await fetch(`https://prayer-server.onrender.com/api/${selectedCity}`);
     const data = await response.json();
     return data;
   } catch (error) {
